@@ -1,0 +1,1 @@
+# nlohmann_json_schema_validator_vendor-release
