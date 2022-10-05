@@ -1,5 +1,13 @@
 ## Changelog for package nlohmann_json_schema_validator_vendor
 
+0.1.3 (2022-10-05)
+------------------
+Fixed system install
+
+0.1.2 (2022-10-05)
+------------------
+* Added ament_cmake_libraries dependence
+
 0.1.1 (2022-10-04)
 ------------------
 * Change install behavior (`#7 <https://github.com/open-rmf/nlohmann_json_schema_validator_vendor/issues/7>`_)
