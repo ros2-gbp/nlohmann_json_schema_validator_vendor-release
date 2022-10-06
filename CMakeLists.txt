@@ -90,10 +90,5 @@ ament_export_include_directories(include)
 ament_export_libraries(nlohmann_json_schema_validator)
 ament_export_dependencies(nlohmann_json_schema_validator)
 
-if(BUILD_TESTING)
-  find_package(ament_lint_auto REQUIRED)
-  ament_lint_auto_find_test_dependencies()
-endif()
-
 # this ensures that the package has an environment hook setting the PATH
 ament_package()
