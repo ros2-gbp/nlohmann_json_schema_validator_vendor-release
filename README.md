@@ -1,3 +1,26 @@
+## nlohmann_json_schema_validator_vendor (humble) - 0.1.3-3
+
+The packages in the `nlohmann_json_schema_validator_vendor` repository were released into the `humble` distro by running `/usr/bin/bloom-release --rosdistro humble --track humble nlohmann_json_schema_validator_vendor` on `Thu, 06 Oct 2022 10:05:15 -0000`
+
+The `nlohmann_json_schema_validator_vendor` package was released.
+
+Version of package(s) in repository `nlohmann_json_schema_validator_vendor`:
+
+- upstream repository: https://github.com/open-rmf/nlohmann_json_schema_validator_vendor
+- release repository: https://github.com/ros2-gbp/nlohmann_json_schema_validator_vendor-release.git
+- rosdistro version: `0.1.1-1`
+- old version: `0.1.3-2`
+- new version: `0.1.3-3`
+
+Versions of tools used:
+
+- bloom version: `0.11.2`
+- catkin_pkg version: `0.5.2`
+- rosdep version: `0.22.1`
+- rosdistro version: `0.9.0`
+- vcstools version: `0.1.42`
+
+
 ## nlohmann_json_schema_validator_vendor (humble) - 0.1.3-2
 
 The packages in the `nlohmann_json_schema_validator_vendor` repository were released into the `humble` distro by running `/usr/bin/bloom-release --rosdistro humble --track humble nlohmann_json_schema_validator_vendor` on `Thu, 06 Oct 2022 09:50:08 -0000`
