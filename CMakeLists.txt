@@ -3,6 +3,7 @@ cmake_minimum_required(VERSION 3.5)
 project(nlohmann_json_schema_validator_vendor)
 
 find_package(ament_cmake REQUIRED)
+find_package(ament_cmake_libraries REQUIRED)
 
 macro(build_nlohmann_json_schema_validator)
 
