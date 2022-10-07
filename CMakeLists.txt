@@ -9,7 +9,6 @@ macro(build_nlohmann_json_schema_validator)
 
   set(cmake_commands)
   set(cmake_configure_args -Wno-dev)
-  list(APPEND cmake_configure_args -DCMAKE_INSTALL_PREFIX=${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}_install)
 
   if(WIN32)
     if(DEFINED CMAKE_GENERATOR)
@@ -57,26 +56,34 @@ macro(build_nlohmann_json_schema_validator)
   else()
     list(APPEND cmake_configure_args "-DCMAKE_CXX_COMPILER=${CMAKE_CXX_COMPILER}")
   endif()
-
+  set(json_external_project_dir ${CMAKE_CURRENT_BINARY_DIR}/json_external_project)
   include(ExternalProject)
-  set(nlohmann_json_schema_validator_version "2.1.0")
+  set(nlohmann_json_schema_validator_version "main")
   externalproject_add(nlohmann_json_schema_validator-${nlohmann_json_schema_validator_version}
+    PREFIX ${json_external_project_dir}
     GIT_REPOSITORY https://github.com/pboettch/json-schema-validator.git
     GIT_TAG ${nlohmann_json_schema_validator_version}
     GIT_CONFIG advice.detachedHead=false
     # Suppress git update due to https://gitlab.kitware.com/cmake/cmake/-/issues/16419
     UPDATE_COMMAND ""
+    PATCH_COMMAND ${CMAKE_COMMAND} -E chdir <SOURCE_DIR> git apply -p1 --ignore-space-change --whitespace=nowarn
+        ${CMAKE_CURRENT_SOURCE_DIR}/patchcmake.patch
     TIMEOUT 6000
     ${cmake_commands}
+    BUILD_ALWAYS ON
     CMAKE_ARGS
+      -DCMAKE_INSTALL_PREFIX=${json_external_project_dir}/install/
+	  -DBUILD_TESTS:BOOL=OFF
+	  -DBUILD_EXAMPLES:BOOL=OFF
+      -DBUILD_SHARED_LIBS:BOOL=true
       ${cmake_configure_args}
-      -DBUILD_SHARED_LIBS=true
+    INSTALL_DIR ${json_external_project_dir}/install/
   )
 
   # The external project will install to the build folder, but we'll install that on make install.
   install(
     DIRECTORY
-      ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}_install/
+      ${json_external_project_dir}/install/
     DESTINATION
       ${CMAKE_INSTALL_PREFIX}
     USE_SOURCE_PERMISSIONS
