@@ -1,5 +1,12 @@
 ## Changelog for package nlohmann_json_schema_validator_vendor
 
+0.2.1 (2022-10-09)
+------------------
+* Remove export of vendored project. [#10](https://github.com/open-rmf/nlohmann_json_schema_validator_vendor/issues/10)
+* Add buildtool dependency on git. [#10](https://github.com/open-rmf/nlohmann_json_schema_validator_vendor/issues/10)
+* Do not export dependencies on the vendored project. [#10](https://github.com/open-rmf/nlohmann_json_schema_validator_vendor/issues/10)
+* Contributors: Steven! Ragnarök
+
 0.2.0 (2022-10-07)
 ------------------
 * Removed unused `ExternalProject_Add` arguments. [#9](https://github.com/open-rmf/nlohmann_json_schema_validator_vendor/pull/9)
