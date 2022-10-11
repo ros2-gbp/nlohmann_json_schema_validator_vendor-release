@@ -3,7 +3,6 @@ cmake_minimum_required(VERSION 3.5)
 project(nlohmann_json_schema_validator_vendor)
 
 find_package(ament_cmake REQUIRED)
-find_package(ament_cmake_libraries REQUIRED)
 
 macro(build_nlohmann_json_schema_validator)
 
@@ -58,26 +57,22 @@ macro(build_nlohmann_json_schema_validator)
   endif()
   set(json_external_project_dir ${CMAKE_CURRENT_BINARY_DIR}/json_external_project)
   include(ExternalProject)
-  set(nlohmann_json_schema_validator_version "main")
+  # HEAD of `main` branch on 2022-10-07
+  set(nlohmann_json_schema_validator_version "1063c9adbafc25f5a14bae15c3babdb039de86c6")
   externalproject_add(nlohmann_json_schema_validator-${nlohmann_json_schema_validator_version}
-    PREFIX ${json_external_project_dir}
     GIT_REPOSITORY https://github.com/pboettch/json-schema-validator.git
     GIT_TAG ${nlohmann_json_schema_validator_version}
     GIT_CONFIG advice.detachedHead=false
     # Suppress git update due to https://gitlab.kitware.com/cmake/cmake/-/issues/16419
     UPDATE_COMMAND ""
-    PATCH_COMMAND ${CMAKE_COMMAND} -E chdir <SOURCE_DIR> git apply -p1 --ignore-space-change --whitespace=nowarn
-        ${CMAKE_CURRENT_SOURCE_DIR}/patchcmake.patch
     TIMEOUT 6000
     ${cmake_commands}
-    BUILD_ALWAYS ON
     CMAKE_ARGS
       -DCMAKE_INSTALL_PREFIX=${json_external_project_dir}/install/
-	  -DBUILD_TESTS:BOOL=OFF
-	  -DBUILD_EXAMPLES:BOOL=OFF
-      -DBUILD_SHARED_LIBS:BOOL=true
+      -DBUILD_SHARED_LIBS:BOOL=ON
+      -DJSON_VALIDATOR_BUILD_TESTS:BOOL=OFF
+      -DJSON_VALIDATOR_BUILD_EXAMPLES:BOOL=OFF
       ${cmake_configure_args}
-    INSTALL_DIR ${json_external_project_dir}/install/
   )
 
   # The external project will install to the build folder, but we'll install that on make install.
@@ -92,10 +87,6 @@ macro(build_nlohmann_json_schema_validator)
 endmacro()
 
 build_nlohmann_json_schema_validator()
-
-ament_export_include_directories(include)
-ament_export_libraries(nlohmann_json_schema_validator)
-ament_export_dependencies(nlohmann_json_schema_validator)
 
 # this ensures that the package has an environment hook setting the PATH
 ament_package()
