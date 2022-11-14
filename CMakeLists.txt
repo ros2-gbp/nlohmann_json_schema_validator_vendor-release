@@ -58,7 +58,7 @@ macro(build_nlohmann_json_schema_validator)
   set(json_external_project_dir ${CMAKE_CURRENT_BINARY_DIR}/json_external_project)
   include(ExternalProject)
   # HEAD of `main` branch on 2022-10-07
-  set(nlohmann_json_schema_validator_version "1063c9adbafc25f5a14bae15c3babdb039de86c6")
+  set(nlohmann_json_schema_validator_version "5782bdcf9ebbc552a4a6f899f8e50ed7181f397c")
   externalproject_add(nlohmann_json_schema_validator-${nlohmann_json_schema_validator_version}
     GIT_REPOSITORY https://github.com/pboettch/json-schema-validator.git
     GIT_TAG ${nlohmann_json_schema_validator_version}
