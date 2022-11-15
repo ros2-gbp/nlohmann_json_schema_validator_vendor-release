@@ -1,5 +1,9 @@
 ## Changelog for package nlohmann_json_schema_validator_vendor
 
+0.2.3 (2022-11-15)
+------------------
+* Fixed external project commit reference to build with json-dev 3.6
+
 0.2.2 (2022-11-14)
 ------------------
 * Vendoring a version that not depends on json-dev > 3.6
