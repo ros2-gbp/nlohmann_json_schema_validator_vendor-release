@@ -66,6 +66,7 @@ macro(build_nlohmann_json_schema_validator)
     # Suppress git update due to https://gitlab.kitware.com/cmake/cmake/-/issues/16419
     UPDATE_COMMAND ""
     TIMEOUT 6000
+    PATCH_COMMAND patch -p1 < ${CMAKE_CURRENT_LIST_DIR}/patch_cmakelist
     ${cmake_commands}
     CMAKE_ARGS
       -DCMAKE_INSTALL_PREFIX=${json_external_project_dir}/install/
