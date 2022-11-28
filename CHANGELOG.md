@@ -1,5 +1,10 @@
 ## Changelog for package nlohmann_json_schema_validator_vendor
 
+0.2.4 (2022-11-28)
+------------------
+* Added patch command and file to try to fix the version problem.
+* Contributors: Esteban Martinena
+
 0.2.3 (2022-11-15)
 ------------------
 * Fixed external project commit reference to build with json-dev 3.6
