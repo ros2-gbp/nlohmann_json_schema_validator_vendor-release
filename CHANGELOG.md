@@ -1,5 +1,20 @@
 ## Changelog for package nlohmann_json_schema_validator_vendor
 
+0.2.4 (2022-11-28)
+------------------
+* Added patch command and file to try to fix the version problem.
+* Contributors: Esteban Martinena
+
+0.2.3 (2022-11-15)
+------------------
+* Fixed external project commit reference to build with json-dev 3.6
+
+0.2.2 (2022-11-14)
+------------------
+* Vendoring a version that not depends on json-dev > 3.6
+  [https://github.com/open-rmf/rmf/issues/265#validator](https://github.com/open-rmf/rmf/issues/265#validator)
+* Contributors: Esteban Martinena
+
 0.2.1 (2022-10-09)
 ------------------
 * Remove export of vendored project. [#10](https://github.com/open-rmf/nlohmann_json_schema_validator_vendor/issues/10)
