@@ -58,7 +58,7 @@ macro(build_nlohmann_json_schema_validator)
   set(json_external_project_dir ${CMAKE_CURRENT_BINARY_DIR}/json_external_project)
   include(ExternalProject)
   # HEAD of `main` branch on 2022-10-07
-  set(nlohmann_json_schema_validator_version "1063c9adbafc25f5a14bae15c3babdb039de86c6")
+  set(nlohmann_json_schema_validator_version "5ef4f903af055550e06955973a193e17efded896")
   externalproject_add(nlohmann_json_schema_validator-${nlohmann_json_schema_validator_version}
     GIT_REPOSITORY https://github.com/pboettch/json-schema-validator.git
     GIT_TAG ${nlohmann_json_schema_validator_version}
@@ -66,6 +66,7 @@ macro(build_nlohmann_json_schema_validator)
     # Suppress git update due to https://gitlab.kitware.com/cmake/cmake/-/issues/16419
     UPDATE_COMMAND ""
     TIMEOUT 6000
+    PATCH_COMMAND patch -p1 < ${CMAKE_CURRENT_LIST_DIR}/patch_cmakelist
     ${cmake_commands}
     CMAKE_ARGS
       -DCMAKE_INSTALL_PREFIX=${json_external_project_dir}/install/
