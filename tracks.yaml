@@ -50,4 +50,5 @@ tracks:
     ros_distro: rolling
     vcs_type: git
     vcs_uri: https://github.com/open-rmf/nlohmann_json_schema_validator_vendor
-    version: :{auto}
+    version: 0.2.4
+    version_saved: :{auto}
