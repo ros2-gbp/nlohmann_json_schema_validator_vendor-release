@@ -2,7 +2,7 @@
 <?xml-model href="http://download.ros.org/schema/package_format2.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="2">
   <name>nlohmann_json_schema_validator_vendor</name>
-  <version>0.3.0</version>
+  <version>0.3.1</version>
   <description>A vendor package for JSON schema validator for JSON for Modern C++</description>
   <maintainer email="grey@openrobotics.org">Grey</maintainer>
   <license>Apache License 2.0</license> <!-- the contents of this package are Apache 2.0 -->
