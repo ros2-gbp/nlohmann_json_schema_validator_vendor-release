@@ -1,1 +1,1 @@
-{"base": "1541cf3", "parent": "rpm/rolling/nlohmann_json_schema_validator_vendor", "previous": "698a88f", "trim": "", "trimbase": ""}
+{"base": "48da98086f34", "parent": "rpm/kilted/nlohmann_json_schema_validator_vendor", "previous": "0f1060cd7805", "trim": "", "trimbase": ""}
