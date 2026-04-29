@@ -1,1 +1,1 @@
-{"base": "ea5416787338", "parent": "debian/rolling/nlohmann_json_schema_validator_vendor", "previous": "795461fe9d6b", "trim": "", "trimbase": ""}
+{"base": "e7fdef8", "parent": "debian/lyrical/nlohmann_json_schema_validator_vendor", "previous": "691af68", "trim": "", "trimbase": ""}
