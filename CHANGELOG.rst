@@ -2,6 +2,18 @@
 Changelog for package nlohmann_json_schema_validator_vendor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.6.1 (2026-09-18)
+------------------
+* Merge pull request `#24 <https://github.com/open-rmf/nlohmann_json_schema_validator_vendor/issues/24>`_ from open-rmf/backport/22-lyrical
+  Backporting `#22 <https://github.com/open-rmf/nlohmann_json_schema_validator_vendor/issues/22>`_ to lyrical
+* feat: update to 2.4.0 (`#22 <https://github.com/open-rmf/nlohmann_json_schema_validator_vendor/issues/22>`_)
+  (cherry picked from commit 43358d96f0a458f798d2d347d18ef7177042d304)
+* Add triage github action (`#20 <https://github.com/open-rmf/nlohmann_json_schema_validator_vendor/issues/20>`_)
+* Contributors: Aaron Chong, Luca Della Vedova, Russ
+
+0.6.0 (2025-06-09)
+------------------
+
 0.5.0 (2024-06-12)
 ------------------
 
