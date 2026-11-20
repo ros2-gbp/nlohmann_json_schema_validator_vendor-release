@@ -1,3 +1,26 @@
+## nlohmann_json_schema_validator_vendor (rolling) - 0.7.0-1
+
+The packages in the `nlohmann_json_schema_validator_vendor` repository were released into the `rolling` distro by running `/usr/bin/bloom-release --rosdistro rolling nlohmann_json_schema_validator_vendor` on `Fri, 20 Nov 2026 03:48:35 -0000`
+
+The `nlohmann_json_schema_validator_vendor` package was released.
+
+Version of package(s) in repository `nlohmann_json_schema_validator_vendor`:
+
+- upstream repository: https://github.com/open-rmf/nlohmann_json_schema_validator_vendor
+- release repository: https://github.com/ros2-gbp/nlohmann_json_schema_validator_vendor-release.git
+- rosdistro version: `0.5.0-2`
+- old version: `0.5.0-2`
+- new version: `0.7.0-1`
+
+Versions of tools used:
+
+- bloom version: `0.14.4`
+- catkin_pkg version: `1.1.1`
+- rosdep version: `0.27.0`
+- rosdistro version: `1.1.0`
+- vcstools version: `0.1.42`
+
+
 ## nlohmann_json_schema_validator_vendor (lyrical) - 0.6.1-2
 
 The packages in the `nlohmann_json_schema_validator_vendor` repository were released into the `lyrical` distro by running `/usr/bin/bloom-release --rosdistro lyrical nlohmann_json_schema_validator_vendor` on `Wed, 11 Nov 2026 15:38:39 -0000`
